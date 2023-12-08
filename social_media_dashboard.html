@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Social Network</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('C:/Users/admin/OneDrive/Desktop/bg.jpg') fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            position: relative; /* Add position relative for positioning the heading */
+        }
+
+        #container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .post {
+            border: 1px solid #ddd;
+            margin-bottom: 80px;
+            padding: 20px;
+            background-color: white; /* Add a background color for better readability */
+        }
+
+        .profile {
+            display: flex;
+            flex-direction: column; /* Align items in a column */
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .profile img {
+            border-radius: 10%;
+            margin-bottom: 10px; /* Adjusted margin for better spacing */
+        }
+
+        .profile span {
+            font-size: 1.5em; /* Set the font size to make it larger */
+        }
+
+        .like-btn {
+            cursor: pointer;
+            color: #888;
+        }
+
+        .liked {
+            color: #e44d26;
+        }
+
+        /* Add the style for the heading on the background image */
+        .background-heading {
+            position: absolute;
+            top: 20px; /* Adjusted distance from the top */
+            left: 20px; /* Adjusted distance from the left */
+            color: white;
+            font-size: 2em;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="background-heading">Explore</div> <!-- Added heading on the background image -->
+        <div class="post">
+            <div class="profile">
+                <img src="C:/Users/admin/OneDrive/Desktop/smp.jpg" alt="User 1">
+                <span><b>krish</b></span>
+            </div>
+            <p>What a great day!</p>
+            <div class="actions">
+                <span class="like-btn" onclick="toggleLike(this)">Like</span>
+            </div>
+        </div>
+
+        <div class="post">
+            <div class="profile">
+                <img src="C:/Users/admin/OneDrive/Desktop/smp2.jpg" alt="User 2">
+                <span><b>pinky</b></span>
+            </div>
+            <p>Another post. Feeling awesome!</p>
+            <div class="actions">
+                <span class="like-btn" onclick="toggleLike(this)">Like</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleLike(element) {
+            element.classList.toggle("liked");
+        }
+    </script>
+</body>
+</html>
